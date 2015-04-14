@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -lpcap checksum.c trace.c -o trace
+./trace trace_files/largeMix.pcap
