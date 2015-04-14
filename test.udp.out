@@ -14,6 +14,10 @@ Packet number: 1  Packet Len: 78
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 2  Packet Len: 491
 
 	Ethernet Header
@@ -28,6 +32,10 @@ Packet number: 2  Packet Len: 491
 		Checksum: Correct (0x30e3)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 3  Packet Len: 85
 
@@ -44,6 +52,10 @@ Packet number: 3  Packet Len: 85
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
 
+	UDP Header
+		Source Port:  2074
+		Dest Port:  53
+
 Packet number: 4  Packet Len: 196
 
 	Ethernet Header
@@ -55,9 +67,13 @@ Packet number: 4  Packet Len: 196
 		TOS: 0x0
 		TTL: 253
 		Protocol: UDP
-		Checksum: Correct (0x0870)
+		Checksum: Correct (0x870)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  2074
 
 Packet number: 5  Packet Len: 73
 
@@ -74,6 +90,10 @@ Packet number: 5  Packet Len: 73
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
 
+	UDP Header
+		Source Port:  2075
+		Dest Port:  53
+
 Packet number: 6  Packet Len: 542
 
 	Ethernet Header
@@ -85,9 +105,13 @@ Packet number: 6  Packet Len: 542
 		TOS: 0x0
 		TTL: 253
 		Protocol: UDP
-		Checksum: Correct (0x0715)
+		Checksum: Correct (0x715)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  2075
 
 Packet number: 7  Packet Len: 74
 
@@ -104,6 +128,10 @@ Packet number: 7  Packet Len: 74
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 8  Packet Len: 233
 
 	Ethernet Header
@@ -118,6 +146,10 @@ Packet number: 8  Packet Len: 233
 		Checksum: Correct (0x68b7)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 9  Packet Len: 72
 
@@ -134,6 +166,10 @@ Packet number: 9  Packet Len: 72
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 10  Packet Len: 478
 
 	Ethernet Header
@@ -148,6 +184,10 @@ Packet number: 10  Packet Len: 478
 		Checksum: Correct (0xb9ca)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 11  Packet Len: 81
 
@@ -164,6 +204,10 @@ Packet number: 11  Packet Len: 81
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 12  Packet Len: 209
 
 	Ethernet Header
@@ -178,6 +222,10 @@ Packet number: 12  Packet Len: 209
 		Checksum: Correct (0xb8d5)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 13  Packet Len: 73
 
@@ -194,6 +242,10 @@ Packet number: 13  Packet Len: 73
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 14  Packet Len: 442
 
 	Ethernet Header
@@ -208,6 +260,10 @@ Packet number: 14  Packet Len: 442
 		Checksum: Correct (0xb7a3)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 15  Packet Len: 79
 
@@ -224,6 +280,10 @@ Packet number: 15  Packet Len: 79
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 16  Packet Len: 255
 
 	Ethernet Header
@@ -238,6 +298,10 @@ Packet number: 16  Packet Len: 255
 		Checksum: Correct (0xb57c)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 17  Packet Len: 84
 
@@ -254,6 +318,10 @@ Packet number: 17  Packet Len: 84
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
+	UDP Header
+		Source Port:  1335
+		Dest Port:  53
+
 Packet number: 18  Packet Len: 431
 
 	Ethernet Header
@@ -268,6 +336,10 @@ Packet number: 18  Packet Len: 431
 		Checksum: Correct (0xb3f5)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  53
+		Dest Port:  1335
 
 Packet number: 19  Packet Len: 92
 
@@ -284,6 +356,10 @@ Packet number: 19  Packet Len: 92
 		Sender IP: 192.168.1.102
 		Dest IP: 192.168.1.255
 
+	UDP Header
+		Source Port:  137
+		Dest Port:  137
+
 Packet number: 20  Packet Len: 104
 
 	Ethernet Header
@@ -298,3 +374,7 @@ Packet number: 20  Packet Len: 104
 		Checksum: Correct (0x8af0)
 		Sender IP: 192.168.1.105
 		Dest IP: 192.168.1.102
+
+	UDP Header
+		Source Port:  137
+		Dest Port:  137

@@ -16,11 +16,8 @@
 
 /* Ethernet header */
 struct sniff_ethernet {
-
-
     unsigned char eth_dest[ETHER_ADDR_LEN]; /* Destination host address */
     unsigned char eth_src[ETHER_ADDR_LEN]; /* Source host address */
-
     unsigned short eth_type; /* IP? ARP? RARP? etc */
 };
 
@@ -36,19 +33,12 @@ struct sniff_arp {
     unsigned char arp_targ_ip_addr[ARP_IP_ADDR_LEN];
 
 };
+/*
+ * IP header info
+ */
 #define ARP_FLAG 1544
 #define IP_FLAG 8
 #define IP_IHL 0x0F
-
-/*
- * IP
- *      TOS: 4
-        Time to live:
-        Protocol:
-        Header checksum:
-       Source IP:
-       Destination IP:
-       */
 #define IP_ADDR_LENGTH 4
 #define IP_RF 0x8000		/* reserved fragment flag */
 #define IP_TCP 0x6
@@ -67,6 +57,9 @@ struct sniff_ip {
     unsigned short ip_len;
     unsigned short ip_id;
     unsigned short ip_off;
+#define IP_DF 0x4000
+#define IP_MF 0x2000
+#define IP_OFFMASK 0x1fff
     unsigned char ip_ttl;
     unsigned char ip_protocol;
     unsigned short ip_sum;
@@ -81,8 +74,8 @@ struct sniff_ip {
 #define FTP_P20 20
 #define FTP_P21 21
 #define SMTP 25
-#define HTTP_80
-#define POP3_110
+#define HTTP 80
+#define POP3 110
 
 /*
  * UDP Struct
@@ -100,16 +93,24 @@ struct sniff_tcp {
     unsigned short tcp_dest;
     unsigned int tcp_seq;
     unsigned int tcp_ack;
-    unsigned short tcp_flags;
+    unsigned char tcp_offset;
+    unsigned char tcp_flags;
     unsigned short tcp_window_size;
     unsigned short tcp_checksum;
     unsigned short tcp_urg_ptr;
 };
 
 /*
+ *  TCP Flags
+ */
+#define TCP_SYN 2
+#define TCP_RST 4
+#define TCP_FIN 1
+
+/*
  * Pseudo-header
  */
-struct pseudo_header {
+struct tcp_pseudo_header {
     unsigned char src[IP_ADDR_LENGTH];
     unsigned char dest[IP_ADDR_LENGTH];
     unsigned char pad;
@@ -117,22 +118,23 @@ struct pseudo_header {
     unsigned short len;
 };
 
+
 /*
  * Function Definitions
  */
-
-
 void printMacAddr(unsigned char * addr);
 void printIPAddr(unsigned char * addr);
 void arpRead(const unsigned char *packet);
 void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header);
 void ipRead(const unsigned char *packet, struct pcap_pkthdr header);
-void icmpRead(const unsigned char *packet);
-void tcpRead();
-void udpRead();
-void ipDistribute(const unsigned char *packet, int flag);
-
-
+void icmpRead(const unsigned char *packet, unsigned short ip_length);
+void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length);
+void udpRead(const unsigned char *packet);
+void ipDistribute(const unsigned char *packet, int flag, struct sniff_ip *ip, int length);
+void tcpCheckSumRead(struct sniff_tcp * tcp, struct tcp_pseudo_header header,
+                     int length);
+void printTCPSourcePorts(struct sniff_tcp *tcp);
+void printTCPDestPorts(struct sniff_tcp *tcp);
 
 
 #endif //PROGRAM1_TRACE_H

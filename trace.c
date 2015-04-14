@@ -59,11 +59,6 @@ void arpRead(const unsigned char *packet) {
     printf("\n\n");
 }
 
-/*
- * cap_len = header.caplen
- * ts = header.ts
- */
-
 void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header) {
     struct sniff_ethernet *eth = malloc(sizeof(struct sniff_ethernet));
     memcpy(eth, packet, sizeof(struct sniff_ethernet));
@@ -89,21 +84,12 @@ void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header) {
     }
 
 }
-/*
- * IP
- *      TOS: 4
-        Time to live:
-        Protocol:
-        Header checksum:
-       Source IP:
-       Destination IP:
-       */
 
 void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     struct sniff_ip *ip = malloc(sizeof(struct sniff_ip));
-    int flag = 0;
+    int flag = 0, len;
     memcpy(ip, packet + ETHER_SIZE, sizeof(struct sniff_ip));
-    int checksum = 1;
+    int checksum = 0;
     printf("\tIP Header\n");
     printf("\t\tTOS: 0x%x\n", ip->ip_tos);
     printf("\t\tTTL: %u\n", ip->ip_ttl);
@@ -129,11 +115,12 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
             break;
     }
 
-    checksum = in_cksum((unsigned short *) packet + ETHER_SIZE, header.len);
+    len = 4 * ((* (packet + ETHER_SIZE)) & IP_IHL);
+    checksum = in_cksum((unsigned short *) ip, len);
     if(!checksum)
-        printf("\t\tChecksum: Correct (0x%04x)\n", endian(ip->ip_sum));
+        printf("\t\tChecksum: Correct (0x%x)\n", endian(ip->ip_sum));
     else
-        printf("\t\tChecksum: Incorrect (0x%04x)\n", endian(ip->ip_sum));
+        printf("\t\tChecksum: Incorrect (0x%x)\n", endian(ip->ip_sum));
 
     printf("\t\tSender IP: ");
     printIPAddr(ip->ip_source);
@@ -141,30 +128,29 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     printIPAddr(ip->ip_dest);
     printf("\n");
 
-    ipDistribute(packet, flag);
+    ipDistribute(packet, flag, ip, len);
 }
 
-void ipDistribute(const unsigned char *packet, int flag){
+void ipDistribute(const unsigned char *packet, int flag, struct sniff_ip *ip, int length){
 
     switch(flag) {
         case 1:
-            //printf("Distribute ICMP\n");
-            icmpRead(packet);
+            icmpRead(packet, ntohs(ip->ip_len)-length);
             break;
         case 2:
-            //printf("Distribute TCP\n");
+            tcpRead(packet, ip, ntohs(ip->ip_len)-length);
             break;
         case 3:
-            //printf("Distribute UDP\n");
+            udpRead(packet);
             break;
         default:
             break;
     }
 }
 
-void icmpRead(const unsigned char *packet) {
+void icmpRead(const unsigned char *packet, unsigned short length) {
     unsigned char * addr = ((unsigned char *)packet + ETHER_SIZE + sizeof(struct sniff_ip));
-    unsigned char type= (unsigned char) *addr;
+    unsigned char type = *addr;
     printf("\n\tICMP Header\n");
 
     switch(type) {
@@ -178,53 +164,125 @@ void icmpRead(const unsigned char *packet) {
             printf("\t\tType: Unknown\n");
             break;
     }
-//    switch(type) {
-//        case IP_ICMP_REQUEST:
-//            printf("\t\tType: Request %x\n", type);
-//            break;
-//        case IP_ICMP_REPLY:
-//            printf("\t\tType: Reply %x\n", type);
-//            break;
-//        default:
-//            printf("\t\tType: Unknown %x\n", type);
-//            break;
-//    }
+}
 
-/*
-    if(!(type & -1))
-        printf("\t\tType: Request %x\n", type);
-    else if(type == 8)
-        printf("\t\tType: Reply %x\n", type);
+void tcpCheckSumRead(struct sniff_tcp * tcp, struct tcp_pseudo_header header,
+                     int length) {
+    int checksum = 1;
+    unsigned char checksumBlock[length];
+
+    memcpy(checksumBlock, &header, sizeof(struct tcp_pseudo_header));
+    memcpy(checksumBlock + sizeof(struct tcp_pseudo_header),
+        tcp, header.len);
+    checksum = in_cksum((unsigned short *)tcp, header.len);
+    if(checksum)
+        printf("\t\tChecksum: Correct (0x%x)\n", endian(tcp->tcp_checksum));
     else
-        printf("\t\tType: Unknown %x\n", type);
-*/
+        printf("\t\tChecksum: Incorrect (0x%04x)\n", endian(tcp->tcp_checksum));
+}
+
+void tcpPrintFlags(struct sniff_tcp * tcp) {
+    char * s = "No", *r = "No", *f = "No";
+    if(tcp->tcp_flags & TCP_SYN)
+        s = "Yes";
+    if(tcp->tcp_flags & TCP_RST)
+        r = "Yes";
+    if(tcp->tcp_flags & TCP_FIN)
+        f = "Yes";
+    printf("\t\tSYN Flag: %s\n", s);
+    printf("\t\tRST Flag: %s\n", r);
+    printf("\t\tFIN Flag: %s\n", f);
 
 }
 
-void tcpRead(void) {
-    printf("\tTCP:\n");
+void printTCPSourcePorts(struct sniff_tcp *tcp) {
+    char * source;
+    switch(endian(tcp->tcp_src)) {
+        case FTP_P20:
+            source = "FTP";
+            break;
+        case FTP_P21:
+            source = "FTP";
+            break;
+        case SMTP:
+            source = "SMTP";
+            break;
+        case HTTP:
+            source = "HTTP";
+            break;
+        case POP3:
+            source = "POP3";
+            break;
+        default:
+            printf("\t\tSource Port:  %u\n", endian(tcp->tcp_src));
+            return;
+    }
+    printf("\t\tSource Port:  %s\n", source);
 }
 
-void udpRead(void) {
-    printf("\tUDP:\n");
+void printTCPDestPorts(struct sniff_tcp *tcp) {
+    char * destination;
+    switch(endian(tcp->tcp_dest)) {
+        case FTP_P20:
+            destination = "FTP";
+            break;
+        case FTP_P21:
+            destination = "FTP";
+            break;
+        case SMTP:
+            destination = "SMTP";
+            break;
+        case HTTP:
+            destination = "HTTP";
+            break;
+        case POP3:
+            destination = "POP3";
+            break;
+        default:
+            printf("\t\tDest Port:  %u\n", endian(tcp->tcp_dest));
+            return;
+    }
+    printf("\t\tDest Port:  %s\n", destination);
 }
 
-/*void packetDistribute(u_char *userData, const struct pcap_pkthdr* pkthdr, const u_char* packet) {
-    ethernetRead(packet);
-    ipRead();
-    icmpRead();
-    tcpRead();
-    udpRead();
-}*/
+void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length) {
+    struct sniff_tcp *tcp = (struct sniff_tcp *)
+            (packet +  sizeof(struct sniff_ethernet) + sizeof(struct sniff_ip));
+    struct tcp_pseudo_header tcpPseudoHeader;
+    int len;
+
+    memset(&tcpPseudoHeader, 0, sizeof(struct tcp_pseudo_header));
+    tcpPseudoHeader.pad = 0;
+    tcpPseudoHeader.len = (htons(ip->ip_len) - (ip->ip_ttl * 4));
+    tcpPseudoHeader.protocol = 6;
+    memcpy(tcpPseudoHeader.src, ip->ip_source, IP_ADDR_LENGTH);
+    memcpy(tcpPseudoHeader.dest, ip->ip_dest, IP_ADDR_LENGTH);
+
+    len = sizeof(struct tcp_pseudo_header) + tcpPseudoHeader.len;
+
+
+
+    printf("\n\tTCP Header\n");
+    printTCPSourcePorts(tcp);
+    printTCPDestPorts(tcp);
+    printf("\t\tSequence Number: %u\n", htonl(tcp->tcp_seq));
+    printf("\t\tACK Number: %u\n", htonl(tcp->tcp_ack));
+    tcpPrintFlags(tcp);
+    printf("\t\tWindow Size: %u\n", endian(tcp->tcp_window_size));
+    tcpCheckSumRead(tcp, tcpPseudoHeader, len);
+}
+
+void udpRead(const unsigned char *packet) {
+    struct sniff_udp * udp = (struct sniff_udp *)
+            (packet +  sizeof(struct sniff_ethernet) + sizeof(struct sniff_ip));
+    printf("\n\tUDP Header\n");
+    printf("\t\tSource Port:  %u\n", endian(udp->udp_source));
+    printf("\t\tDest Port:  %u\n", endian(udp->udp_dest));
+
+}
 
 void packetDistribute(const unsigned char *packet, struct pcap_pkthdr header) {
     ethernetRead(packet, header);
-/*
-    ipRead();
-    icmpRead();
-    tcpRead();
-    udpRead();
-    */
 }
 
 int main(int argc, char **argv) {
@@ -240,25 +298,10 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    // change if to while for multiple packets
     while((packet = pcap_next(pcapFile, &header)) != NULL) {
         printf("\nPacket number: %i  Packet Len: %i\n\n", counter++, header.len);
         packetDistribute(packet, header);
     };
-    /*if((packet = pcap_next(pcapFile, &header)) != NULL) {
-        printf("Packet number: %i  Packet Len: %i\n\n", counter++, header.len);
-        NewDistribute(packet, header);
-    };*/
-
-/*
-
-    if (pcap_loop(pcapFile, 0, packetDistribute, NULL) < 0) {
-        printf("pcap_loop() failed: %s\n", pcap_geterr(pcapFile));
-        return 1;
-    }
-*/
-
-
 
     pcap_close(pcapFile);
     return 0;
