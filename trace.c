@@ -101,28 +101,35 @@ void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header) {
 
 void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     struct sniff_ip *ip = malloc(sizeof(struct sniff_ip));
-    int icmp;
-
+    int flag = 0;
     memcpy(ip, packet + ETHER_SIZE, sizeof(struct sniff_ip));
     int checksum = 1;
     printf("\tIP Header\n");
     printf("\t\tTOS: 0x%x\n", ip->ip_tos);
     printf("\t\tTTL: %u\n", ip->ip_ttl);
     printf("\t\tProtocol: ");
-    if((icmp = (!(ip->ip_protocol & IP_ICMP)))) {
-        printf("ICMP\n");
+
+    //printf("%02x\n", ip->ip_protocol);
+    switch(ip->ip_protocol) {
+        case IP_ICMP:
+            printf("ICMP\n");
+            flag = 1;
+            break;
+        case IP_TCP:
+            printf("TCP\n");
+            flag = 2;
+            break;
+        case IP_UDP:
+            printf("UDP\n");
+            flag = 3;
+            break;
+        default:
+            printf("Unknown\n");
+            flag = -1;
+            break;
     }
-    else if (!(ip->ip_protocol & ~IP_TCP)) {
-        printf("TCP\n");
-    }
-    else
-        printf("Unknown\n");
-    /*
-    else if(!(ip->ip_protocol == 11)) {
-        printf("UDP");
-    }
-     */
-    checksum = in_cksum((unsigned short *)packet + ETHER_SIZE, header.len);
+
+    checksum = in_cksum((unsigned short *) packet + ETHER_SIZE, header.len);
     if(checksum)
         printf("\t\tChecksum: Correct (0x%04x)\n", endian(ip->ip_sum));
     else
@@ -133,8 +140,26 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     printf("\n\t\tDest IP: ");
     printIPAddr(ip->ip_dest);
     printf("\n");
-    if(icmp)
-        icmpRead(packet);
+
+    ipDistribute(packet, flag);
+}
+
+void ipDistribute(const unsigned char *packet, int flag){
+
+    switch(flag) {
+        case 1:
+            //printf("Distribute ICMP\n");
+            icmpRead(packet);
+            break;
+        case 2:
+            //printf("Distribute TCP\n");
+            break;
+        case 3:
+            //printf("Distribute UDP\n");
+            break;
+        default:
+            break;
+    }
 }
 
 void icmpRead(const unsigned char *packet) {

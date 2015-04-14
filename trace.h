@@ -38,6 +38,7 @@ struct sniff_arp {
 };
 #define ARP_FLAG 1544
 #define IP_FLAG 8
+#define IP_IHL 0x0F
 
 /*
  * IP
@@ -51,11 +52,15 @@ struct sniff_arp {
 #define IP_ADDR_LENGTH 4
 #define IP_RF 0x8000		/* reserved fragment flag */
 #define IP_TCP 0x6
+#define IP_UDP 0x11
 #define IP_DF 0x4000		/* dont fragment flag */
-#define IP_ICMP 0x2		/* more fragments flag */
+#define IP_ICMP 0x01		/* more fragments flag */
 #define IP_ICMP_REQUEST 8
 #define IP_ICMP_REPLY 0
 
+/*
+ * IP Struct
+ */
 struct sniff_ip {
     unsigned char ip_version;
     unsigned char ip_tos;
@@ -71,6 +76,48 @@ struct sniff_ip {
 
 
 /*
+ * TCP/UDP Port Numbers
+ */
+#define FTP_P20 20
+#define FTP_P21 21
+#define SMTP 25
+#define HTTP_80
+#define POP3_110
+
+/*
+ * UDP Struct
+ */
+struct sniff_udp {
+    unsigned short udp_source;
+    unsigned short udp_dest;
+};
+
+/*
+ * TCP Struct
+ */
+struct sniff_tcp {
+    unsigned short tcp_src;
+    unsigned short tcp_dest;
+    unsigned int tcp_seq;
+    unsigned int tcp_ack;
+    unsigned short tcp_flags;
+    unsigned short tcp_window_size;
+    unsigned short tcp_checksum;
+    unsigned short tcp_urg_ptr;
+};
+
+/*
+ * Pseudo-header
+ */
+struct pseudo_header {
+    unsigned char src[IP_ADDR_LENGTH];
+    unsigned char dest[IP_ADDR_LENGTH];
+    unsigned char pad;
+    unsigned char protocol;
+    unsigned short len;
+};
+
+/*
  * Function Definitions
  */
 
@@ -83,6 +130,7 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header);
 void icmpRead(const unsigned char *packet);
 void tcpRead();
 void udpRead();
+void ipDistribute(const unsigned char *packet, int flag);
 
 
 

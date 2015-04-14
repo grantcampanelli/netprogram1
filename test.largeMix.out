@@ -9,13 +9,10 @@ Packet number: 1  Packet Len: 73
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x5265)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 2  Packet Len: 180
 
@@ -27,13 +24,10 @@ Packet number: 2  Packet Len: 180
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf807)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 3  Packet Len: 62
 
@@ -135,13 +129,10 @@ Packet number: 9  Packet Len: 77
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x5253)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 10  Packet Len: 187
 
@@ -153,13 +144,10 @@ Packet number: 10  Packet Len: 187
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf7ff)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 11  Packet Len: 62
 
@@ -726,13 +714,10 @@ Packet number: 48  Packet Len: 69
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x523a)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 49  Packet Len: 279
 
@@ -744,13 +729,10 @@ Packet number: 49  Packet Len: 279
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf7a2)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 50  Packet Len: 62
 
@@ -822,13 +804,10 @@ Packet number: 54  Packet Len: 79
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x5224)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 55  Packet Len: 191
 
@@ -840,13 +819,10 @@ Packet number: 55  Packet Len: 191
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf7f9)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 56  Packet Len: 438
 
@@ -1053,13 +1029,10 @@ Packet number: 69  Packet Len: 78
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x5212)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 70  Packet Len: 60
 
@@ -1086,13 +1059,10 @@ Packet number: 71  Packet Len: 501
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf6c2)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 72  Packet Len: 62
 
@@ -2124,13 +2094,10 @@ Packet number: 140  Packet Len: 73
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x51c5)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 141  Packet Len: 302
 
@@ -2172,13 +2139,10 @@ Packet number: 143  Packet Len: 169
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf80d)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 144  Packet Len: 284
 
@@ -2475,13 +2439,10 @@ Packet number: 163  Packet Len: 71
 	IP Header
 		TOS: 0x0
 		TTL: 128
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0x51a2)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
-
-	ICMP Header
-		Type: Unknown
 
 Packet number: 164  Packet Len: 297
 
@@ -2493,13 +2454,10 @@ Packet number: 164  Packet Len: 297
 	IP Header
 		TOS: 0x0
 		TTL: 253
-		Protocol: ICMP
+		Protocol: UDP
 		Checksum: Correct (0xf78c)
 		Sender IP: 64.166.172.8
 		Dest IP: 192.168.1.102
-
-	ICMP Header
-		Type: Reply
 
 Packet number: 165  Packet Len: 62
 
