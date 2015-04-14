@@ -130,7 +130,7 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     }
 
     checksum = in_cksum((unsigned short *) packet + ETHER_SIZE, header.len);
-    if(checksum)
+    if(!checksum)
         printf("\t\tChecksum: Correct (0x%04x)\n", endian(ip->ip_sum));
     else
         printf("\t\tChecksum: Incorrect (0x%04x)\n", endian(ip->ip_sum));
