@@ -260,8 +260,6 @@ void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length) {
 
     len = sizeof(struct tcp_pseudo_header) + tcpPseudoHeader.len;
 
-
-
     printf("\n\tTCP Header\n");
     printTCPSourcePorts(tcp);
     printTCPDestPorts(tcp);
