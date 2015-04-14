@@ -122,7 +122,6 @@ void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
         printf("UDP");
     }
      */
-    printf("\n\npacketsize: %u\n\n", (unsigned short *) packet);
     checksum = in_cksum((unsigned short *)packet + ETHER_SIZE, header.len);
     if(checksum)
         printf("\t\tChecksum: Correct (0x%04x)\n", endian(ip->ip_sum));

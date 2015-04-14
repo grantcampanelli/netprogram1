@@ -10,10 +10,6 @@ Packet number: 1  Packet Len: 71
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x512b)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
@@ -32,10 +28,6 @@ Packet number: 2  Packet Len: 71
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x52bf)
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
@@ -54,10 +46,6 @@ Packet number: 3  Packet Len: 422
 		TOS: 0x0
 		TTL: 247
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xbd56)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
@@ -76,10 +64,6 @@ Packet number: 4  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9bd3)
 		Sender IP: 192.168.1.102
 		Dest IP: 69.226.92.47
@@ -98,10 +82,6 @@ Packet number: 5  Packet Len: 74
 		TOS: 0x0
 		TTL: 56
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0d96)
 		Sender IP: 69.226.92.47
 		Dest IP: 192.168.1.102
@@ -120,10 +100,6 @@ Packet number: 6  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9bd2)
 		Sender IP: 192.168.1.102
 		Dest IP: 69.226.92.47
@@ -142,10 +118,6 @@ Packet number: 7  Packet Len: 74
 		TOS: 0x0
 		TTL: 56
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0d95)
 		Sender IP: 69.226.92.47
 		Dest IP: 192.168.1.102
@@ -164,10 +136,6 @@ Packet number: 8  Packet Len: 71
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x52bc)
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
@@ -186,10 +154,6 @@ Packet number: 9  Packet Len: 253
 		TOS: 0x0
 		TTL: 247
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xb3b3)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
@@ -208,10 +172,6 @@ Packet number: 10  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xf131)
 		Sender IP: 192.168.1.102
 		Dest IP: 199.181.132.250
@@ -230,10 +190,6 @@ Packet number: 11  Packet Len: 74
 		TOS: 0x0
 		TTL: 111
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x2145)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
@@ -252,10 +208,6 @@ Packet number: 12  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xf130)
 		Sender IP: 192.168.1.102
 		Dest IP: 199.181.132.250
@@ -274,10 +226,6 @@ Packet number: 13  Packet Len: 74
 		TOS: 0x0
 		TTL: 111
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x20fd)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
@@ -296,10 +244,6 @@ Packet number: 14  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xf12f)
 		Sender IP: 192.168.1.102
 		Dest IP: 199.181.132.250
@@ -318,10 +262,6 @@ Packet number: 15  Packet Len: 74
 		TOS: 0x0
 		TTL: 111
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x20bd)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
@@ -340,10 +280,6 @@ Packet number: 16  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xf12e)
 		Sender IP: 192.168.1.102
 		Dest IP: 199.181.132.250
@@ -362,10 +298,6 @@ Packet number: 17  Packet Len: 74
 		TOS: 0x0
 		TTL: 111
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x2086)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
@@ -384,10 +316,6 @@ Packet number: 18  Packet Len: 92
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xb9db)
 		Sender IP: 192.168.1.103
 		Dest IP: 192.168.1.255
@@ -421,10 +349,6 @@ Packet number: 20  Packet Len: 84
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x52aa)
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
@@ -443,10 +367,6 @@ Packet number: 21  Packet Len: 180
 		TOS: 0x0
 		TTL: 247
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xb107)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
@@ -465,10 +385,6 @@ Packet number: 22  Packet Len: 62
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd557)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -484,10 +400,6 @@ Packet number: 23  Packet Len: 60
 		TOS: 0x0
 		TTL: 237
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3938)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -503,10 +415,6 @@ Packet number: 24  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd55e)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -522,10 +430,6 @@ Packet number: 25  Packet Len: 144
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd503)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -541,10 +445,6 @@ Packet number: 26  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3dca)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -560,10 +460,6 @@ Packet number: 27  Packet Len: 992
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3a1f)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -579,10 +475,6 @@ Packet number: 28  Packet Len: 266
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd488)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -598,10 +490,6 @@ Packet number: 29  Packet Len: 129
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3d7d)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -617,10 +505,6 @@ Packet number: 30  Packet Len: 355
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd42e)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -636,10 +520,6 @@ Packet number: 31  Packet Len: 560
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3bcd)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -655,10 +535,6 @@ Packet number: 32  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd505)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -674,10 +550,6 @@ Packet number: 33  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x381a)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -693,10 +565,6 @@ Packet number: 34  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3819)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -712,10 +580,6 @@ Packet number: 35  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd559)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -731,10 +595,6 @@ Packet number: 36  Packet Len: 284
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3cde)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -750,10 +610,6 @@ Packet number: 37  Packet Len: 163
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4eb)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -769,10 +625,6 @@ Packet number: 38  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3dc3)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -788,10 +640,6 @@ Packet number: 39  Packet Len: 899
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd20a)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -807,10 +655,6 @@ Packet number: 40  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3dc2)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -826,10 +670,6 @@ Packet number: 41  Packet Len: 176
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3d47)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -845,10 +685,6 @@ Packet number: 42  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3814)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -864,10 +700,6 @@ Packet number: 43  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd556)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -883,10 +715,6 @@ Packet number: 44  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3813)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -902,10 +730,6 @@ Packet number: 45  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3812)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -921,10 +745,6 @@ Packet number: 46  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd555)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -940,10 +760,6 @@ Packet number: 47  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3811)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -959,10 +775,6 @@ Packet number: 48  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3810)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -978,10 +790,6 @@ Packet number: 49  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd554)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -997,10 +805,6 @@ Packet number: 50  Packet Len: 820
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3abd)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1016,10 +820,6 @@ Packet number: 51  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd553)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1035,10 +835,6 @@ Packet number: 52  Packet Len: 840
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3aa8)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1054,10 +850,6 @@ Packet number: 53  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd552)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1073,10 +865,6 @@ Packet number: 54  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4fc)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1092,10 +880,6 @@ Packet number: 55  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db9)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1111,10 +895,6 @@ Packet number: 56  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4fb)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1130,10 +910,6 @@ Packet number: 57  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db8)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1149,10 +925,6 @@ Packet number: 58  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4fa)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1168,10 +940,6 @@ Packet number: 59  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db7)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1187,10 +955,6 @@ Packet number: 60  Packet Len: 293
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd45f)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1206,10 +970,6 @@ Packet number: 61  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db6)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1225,10 +985,6 @@ Packet number: 62  Packet Len: 176
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3d3b)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1244,10 +1000,6 @@ Packet number: 63  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd54d)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1263,10 +1015,6 @@ Packet number: 64  Packet Len: 600
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3b92)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1282,10 +1030,6 @@ Packet number: 65  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd54c)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1301,10 +1045,6 @@ Packet number: 66  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd54b)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1320,10 +1060,6 @@ Packet number: 67  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4f5)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1339,10 +1075,6 @@ Packet number: 68  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db3)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1358,10 +1090,6 @@ Packet number: 69  Packet Len: 139
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4f4)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1377,10 +1105,6 @@ Packet number: 70  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db2)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1396,10 +1120,6 @@ Packet number: 71  Packet Len: 832
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3aa7)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1415,10 +1135,6 @@ Packet number: 72  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd548)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1434,10 +1150,6 @@ Packet number: 73  Packet Len: 131
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4fa)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -1453,10 +1165,6 @@ Packet number: 74  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3db0)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -1472,10 +1180,6 @@ Packet number: 75  Packet Len: 79
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x5295)
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
@@ -1494,10 +1198,6 @@ Packet number: 76  Packet Len: 175
 		TOS: 0x0
 		TTL: 247
 		Protocol: ICMP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa2e0)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
@@ -1516,10 +1216,6 @@ Packet number: 77  Packet Len: 62
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c97)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1535,10 +1231,6 @@ Packet number: 78  Packet Len: 62
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1554,10 +1246,6 @@ Packet number: 79  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c9d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1573,10 +1261,6 @@ Packet number: 80  Packet Len: 382
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0b54)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1592,10 +1276,6 @@ Packet number: 81  Packet Len: 60
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x66c0)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1611,10 +1291,6 @@ Packet number: 82  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x6113)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1630,10 +1306,6 @@ Packet number: 83  Packet Len: 854
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x639e)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1649,10 +1321,6 @@ Packet number: 84  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c9a)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1668,10 +1336,6 @@ Packet number: 85  Packet Len: 583
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0a88)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1687,10 +1351,6 @@ Packet number: 86  Packet Len: 62
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c8f)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1706,10 +1366,6 @@ Packet number: 87  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x6111)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1725,10 +1381,6 @@ Packet number: 88  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x6110)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1744,10 +1396,6 @@ Packet number: 89  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c95)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1763,10 +1411,6 @@ Packet number: 90  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x610f)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1782,10 +1426,6 @@ Packet number: 91  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c94)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1801,10 +1441,6 @@ Packet number: 92  Packet Len: 62
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1820,10 +1456,6 @@ Packet number: 93  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c93)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1839,10 +1471,6 @@ Packet number: 94  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c92)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1858,10 +1486,6 @@ Packet number: 95  Packet Len: 584
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0a7f)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1877,10 +1501,6 @@ Packet number: 96  Packet Len: 62
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c87)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1896,10 +1516,6 @@ Packet number: 97  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x610e)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1915,10 +1531,6 @@ Packet number: 98  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c8d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1934,10 +1546,6 @@ Packet number: 99  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x610d)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1953,10 +1561,6 @@ Packet number: 100  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c8c)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -1972,10 +1576,6 @@ Packet number: 101  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x610c)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -1991,10 +1591,6 @@ Packet number: 102  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c8b)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2010,10 +1606,6 @@ Packet number: 103  Packet Len: 326
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x65a6)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2029,10 +1621,6 @@ Packet number: 104  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c8a)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2048,10 +1636,6 @@ Packet number: 105  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x610b)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2067,10 +1651,6 @@ Packet number: 106  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c89)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2086,10 +1666,6 @@ Packet number: 107  Packet Len: 60
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x446b)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2105,10 +1681,6 @@ Packet number: 108  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3ebe)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2124,10 +1696,6 @@ Packet number: 109  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3ebd)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2143,10 +1711,6 @@ Packet number: 110  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c88)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2162,10 +1726,6 @@ Packet number: 111  Packet Len: 62
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2181,10 +1741,6 @@ Packet number: 112  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c87)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2200,10 +1756,6 @@ Packet number: 113  Packet Len: 579
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0a79)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2219,10 +1771,6 @@ Packet number: 114  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3ebc)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2238,10 +1786,6 @@ Packet number: 115  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c84)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2257,10 +1801,6 @@ Packet number: 116  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c83)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2276,10 +1816,6 @@ Packet number: 117  Packet Len: 1043
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x408a)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2295,10 +1831,6 @@ Packet number: 118  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c82)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2314,10 +1846,6 @@ Packet number: 119  Packet Len: 60
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xab39)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2333,10 +1861,6 @@ Packet number: 120  Packet Len: 239
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xaa7f)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2352,10 +1876,6 @@ Packet number: 121  Packet Len: 62
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c79)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2371,10 +1891,6 @@ Packet number: 122  Packet Len: 580
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0a71)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2390,10 +1906,6 @@ Packet number: 123  Packet Len: 62
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2409,10 +1921,6 @@ Packet number: 124  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c7d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2428,10 +1936,6 @@ Packet number: 125  Packet Len: 580
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0a6e)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2447,10 +1951,6 @@ Packet number: 126  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa58b)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2466,10 +1966,6 @@ Packet number: 127  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa58a)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2485,10 +1981,6 @@ Packet number: 128  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c7a)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2504,10 +1996,6 @@ Packet number: 129  Packet Len: 60
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xca5c)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2523,10 +2011,6 @@ Packet number: 130  Packet Len: 268
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xc984)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2542,10 +2026,6 @@ Packet number: 131  Packet Len: 66
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c6d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2561,10 +2041,6 @@ Packet number: 132  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xc4af)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2580,10 +2056,6 @@ Packet number: 133  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c78)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2599,10 +2071,6 @@ Packet number: 134  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c77)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2618,10 +2086,6 @@ Packet number: 135  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa589)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2637,10 +2101,6 @@ Packet number: 136  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c76)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2656,10 +2116,6 @@ Packet number: 137  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x0c75)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2675,10 +2131,6 @@ Packet number: 138  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa588)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2694,10 +2146,6 @@ Packet number: 139  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c74)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2713,10 +2161,6 @@ Packet number: 140  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa587)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2732,10 +2176,6 @@ Packet number: 141  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c73)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2751,10 +2191,6 @@ Packet number: 142  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa586)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2770,10 +2206,6 @@ Packet number: 143  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c72)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2789,10 +2221,6 @@ Packet number: 144  Packet Len: 1506
 		TOS: 0x0
 		TTL: 43
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xa585)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
@@ -2808,10 +2236,6 @@ Packet number: 145  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x4c71)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
@@ -2827,10 +2251,6 @@ Packet number: 146  Packet Len: 131
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4c9)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -2846,10 +2266,6 @@ Packet number: 147  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3daf)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -2865,10 +2281,6 @@ Packet number: 148  Packet Len: 147
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4b8)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -2884,10 +2296,6 @@ Packet number: 149  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3dae)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -2903,10 +2311,6 @@ Packet number: 150  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3801)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -2922,10 +2326,6 @@ Packet number: 151  Packet Len: 1506
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3800)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -2941,10 +2341,6 @@ Packet number: 152  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd514)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -2960,10 +2356,6 @@ Packet number: 153  Packet Len: 688
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3b31)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -2979,10 +2371,6 @@ Packet number: 154  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd513)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -2998,10 +2386,6 @@ Packet number: 155  Packet Len: 296
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3cb8)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3017,10 +2401,6 @@ Packet number: 156  Packet Len: 131
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4c5)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3036,10 +2416,6 @@ Packet number: 157  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3da9)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3055,10 +2431,6 @@ Packet number: 158  Packet Len: 208
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd477)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3074,10 +2446,6 @@ Packet number: 159  Packet Len: 264
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3cd6)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3093,10 +2461,6 @@ Packet number: 160  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3da7)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3112,10 +2476,6 @@ Packet number: 161  Packet Len: 240
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd456)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3131,10 +2491,6 @@ Packet number: 162  Packet Len: 1200
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x392c)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3150,10 +2506,6 @@ Packet number: 163  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd50f)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3169,10 +2521,6 @@ Packet number: 164  Packet Len: 147
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4b1)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3188,10 +2536,6 @@ Packet number: 165  Packet Len: 123
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd4c8)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
@@ -3207,10 +2551,6 @@ Packet number: 166  Packet Len: 60
 		TOS: 0x0
 		TTL: 44
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0x3da5)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
@@ -3226,10 +2566,6 @@ Packet number: 167  Packet Len: 54
 		TOS: 0x0
 		TTL: 128
 		Protocol: TCP
-
-
-packetsize: 3514843648
-
 		Checksum: Correct (0xd50c)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183

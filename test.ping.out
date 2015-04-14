@@ -10,10 +10,6 @@ Packet number: 1  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x1743)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.94.230.35
@@ -32,10 +28,6 @@ Packet number: 2  Packet Len: 74
 		TOS: 0x0
 		TTL: 52
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x5565)
 		Sender IP: 66.94.230.35
 		Dest IP: 192.168.1.102
@@ -54,10 +46,6 @@ Packet number: 3  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x1742)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.94.230.35
@@ -76,10 +64,6 @@ Packet number: 4  Packet Len: 74
 		TOS: 0x0
 		TTL: 52
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x4f0a)
 		Sender IP: 66.94.230.35
 		Dest IP: 192.168.1.102
@@ -98,10 +82,6 @@ Packet number: 5  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x4371)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.233.187.99
@@ -120,10 +100,6 @@ Packet number: 6  Packet Len: 74
 		TOS: 0x0
 		TTL: 242
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xd170)
 		Sender IP: 64.233.187.99
 		Dest IP: 192.168.1.102
@@ -142,10 +118,6 @@ Packet number: 7  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x4370)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.233.187.99
@@ -164,10 +136,6 @@ Packet number: 8  Packet Len: 74
 		TOS: 0x0
 		TTL: 242
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xd16f)
 		Sender IP: 64.233.187.99
 		Dest IP: 192.168.1.102
@@ -186,10 +154,6 @@ Packet number: 9  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x436f)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.233.187.99
@@ -208,10 +172,6 @@ Packet number: 10  Packet Len: 74
 		TOS: 0x0
 		TTL: 242
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xd16e)
 		Sender IP: 64.233.187.99
 		Dest IP: 192.168.1.102
@@ -230,10 +190,6 @@ Packet number: 11  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0x436e)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.233.187.99
@@ -252,10 +208,6 @@ Packet number: 12  Packet Len: 74
 		TOS: 0x0
 		TTL: 242
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xd16d)
 		Sender IP: 64.233.187.99
 		Dest IP: 192.168.1.102
@@ -274,10 +226,6 @@ Packet number: 13  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xbc00)
 		Sender IP: 192.168.1.102
 		Dest IP: 129.65.2.119
@@ -296,10 +244,6 @@ Packet number: 14  Packet Len: 74
 		TOS: 0x0
 		TTL: 128
 		Protocol: ICMP
-
-
-packetsize: 2977972736
-
 		Checksum: Correct (0xbbff)
 		Sender IP: 192.168.1.102
 		Dest IP: 129.65.2.119
