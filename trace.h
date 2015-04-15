@@ -8,7 +8,7 @@
 #define endian(hex) (((hex & 0x00ff) << 8) + ((hex & 0xff00) >> 8))
 
 
-#define ETHER_ADDR_LEN	6 /* Ethernet addresses are 6 bytes */
+#define ETHER_ADDR_LEN	6
 #define ARP_MAC_ADDR_LEN 6
 #define ARP_IP_ADDR_LEN 4
 #define ETHER_SIZE 14
@@ -40,15 +40,12 @@ struct sniff_arp {
 #define IP_FLAG 8
 #define IP_IHL 0x0F
 #define IP_ADDR_LENGTH 4
-#define IP_RF 0x8000		/* reserved fragment flag */
 #define IP_TCP 0x6
 #define IP_UDP 0x11
-#define IP_DF 0x4000		/* dont fragment flag */
-#define IP_ICMP 0x01		/* more fragments flag */
+#define IP_ICMP 0x01
 #define IP_ICMP_REQUEST 8
 #define IP_ICMP_REPLY 0
 #define IP_HL(ip)               (((ip)->ip_version) & 0x0f)
-#define IP_V(ip)                (((ip)->ip_version) >> 8)
 
 /*
  * IP Struct
@@ -59,9 +56,6 @@ struct sniff_ip {
     unsigned short ip_len;
     unsigned short ip_id;
     unsigned short ip_off;
-#define IP_DF 0x4000
-#define IP_MF 0x2000
-#define IP_OFFMASK 0x1fff
     unsigned char ip_ttl;
     unsigned char ip_protocol;
     unsigned short ip_sum;
@@ -90,7 +84,6 @@ struct sniff_udp {
 /*
  * TCP Struct
  */
-#define TCP_OFF(tcp)   (((tcp)->tcp_offset & 0xf0) >> 4)
 
 struct sniff_tcp {
     unsigned short tcp_src;
@@ -116,13 +109,6 @@ struct sniff_tcp {
  */
 
 #define SIZE_PSEUDO 12
-struct tcp_pseudo_header {
-    unsigned char src[IP_ADDR_LENGTH];
-    unsigned char dest[IP_ADDR_LENGTH];
-    unsigned char pad;
-    unsigned char protocol;
-    unsigned short len;
-};
 
 
 
@@ -132,14 +118,13 @@ struct tcp_pseudo_header {
 void printMacAddr(unsigned char * addr);
 void printIPAddr(unsigned char * addr);
 void arpRead(const unsigned char *packet);
-void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header);
-void ipRead(const unsigned char *packet, struct pcap_pkthdr header);
-void icmpRead(const unsigned char *packet, unsigned short ip_length);
-void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length);
+void ethernetRead(const unsigned char *packet);
+void ipRead(const unsigned char *packet);
+void icmpRead(const unsigned char *packet);
+void tcpRead(const unsigned char *packet, struct sniff_ip *ip);
 void udpRead(const unsigned char *packet);
-void ipDistribute(const unsigned char *packet, int flag, struct sniff_ip *ip, int length);
-void tcpCheckSumRead(struct sniff_tcp * tcp, struct sniff_ip*, struct tcp_pseudo_header * header,
-                     unsigned short length);
+void ipDistribute(const unsigned char *packet, int flag, struct sniff_ip *ip);
+void tcpCheckSumRead(struct sniff_tcp * tcp, struct sniff_ip*, unsigned short length);
 void printTCPSourcePorts(struct sniff_tcp *tcp);
 void printTCPDestPorts(struct sniff_tcp *tcp);
 
