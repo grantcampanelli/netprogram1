@@ -15,7 +15,7 @@ Packet number: 1  Packet Len: 74
 		Dest IP: 66.94.230.35
 
 	ICMP Header
-		Type: Request
+		Type: Unknown
 
 Packet number: 2  Packet Len: 74
 

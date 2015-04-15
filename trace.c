@@ -88,6 +88,7 @@ void ethernetRead(const unsigned char *packet, struct pcap_pkthdr header) {
 void ipRead(const unsigned char *packet, struct pcap_pkthdr header) {
     struct sniff_ip *ip = malloc(sizeof(struct sniff_ip));
     int flag = 0, len;
+    // unsigned char * pointer = ip;
     memcpy(ip, packet + ETHER_SIZE, sizeof(struct sniff_ip));
     int checksum = 0;
     printf("\tIP Header\n");
@@ -149,8 +150,9 @@ void ipDistribute(const unsigned char *packet, int flag, struct sniff_ip *ip, in
 }
 
 void icmpRead(const unsigned char *packet, unsigned short length) {
-    unsigned char * addr = ((unsigned char *)packet + ETHER_SIZE + sizeof(struct sniff_ip));
-    unsigned char type = *addr;
+    struct sniff_ip * ip = (struct sniff_ip *)(packet + ETHER_SIZE);
+    unsigned char * addr = ((unsigned char *)packet + ETHER_SIZE + (IP_HL(ip) * 4));
+    unsigned char type = (unsigned char)*addr;
     printf("\n\tICMP Header\n");
 
     switch(type) {
@@ -166,19 +168,30 @@ void icmpRead(const unsigned char *packet, unsigned short length) {
     }
 }
 
-void tcpCheckSumRead(struct sniff_tcp * tcp, struct tcp_pseudo_header header,
-                     int length) {
-    int checksum = 1;
-    unsigned char checksumBlock[length];
+/*
+ * Send a pointer to where pseudo header and TCP is
+ * make chunk somerwhere to put the pseudo header htne the tcp
+ * check (addr at beginning, length which is 12 + (ip total - ip header))
+ */
 
-    memcpy(checksumBlock, &header, sizeof(struct tcp_pseudo_header));
-    memcpy(checksumBlock + sizeof(struct tcp_pseudo_header),
-        tcp, header.len);
-    checksum = in_cksum((unsigned short *)tcp, header.len);
-    if(checksum)
+void tcpCheckSumRead(struct sniff_tcp * tcp, struct sniff_ip * ip, struct tcp_pseudo_header * tcpPseudoHeader,
+                     unsigned short length) {
+    int checksum;
+    uint8_t tcpWithPseudo[length + SIZE_PSEUDO];
+    memcpy(tcpPseudoHeader->src, ip->ip_source, IP_ADDR_LENGTH);
+    memcpy(tcpPseudoHeader->dest, ip->ip_dest, IP_ADDR_LENGTH);
+    tcpPseudoHeader->pad = 0;
+    tcpPseudoHeader->protocol = 6;
+    tcpPseudoHeader->len = length & 0x00FF;
+
+    memcpy(tcpWithPseudo, tcpPseudoHeader, SIZE_PSEUDO);
+    memcpy(tcpWithPseudo + SIZE_PSEUDO, tcp, length);
+
+    checksum = in_cksum((unsigned short *)tcpWithPseudo, (length + SIZE_PSEUDO));
+    if(!checksum)
         printf("\t\tChecksum: Correct (0x%x)\n", endian(tcp->tcp_checksum));
     else
-        printf("\t\tChecksum: Incorrect (0x%04x)\n", endian(tcp->tcp_checksum));
+        printf("\t\tChecksum: Incorrect (0x%x)\n", endian(tcp->tcp_checksum));
 }
 
 void tcpPrintFlags(struct sniff_tcp * tcp) {
@@ -192,7 +205,6 @@ void tcpPrintFlags(struct sniff_tcp * tcp) {
     printf("\t\tSYN Flag: %s\n", s);
     printf("\t\tRST Flag: %s\n", r);
     printf("\t\tFIN Flag: %s\n", f);
-
 }
 
 void printTCPSourcePorts(struct sniff_tcp *tcp) {
@@ -245,20 +257,26 @@ void printTCPDestPorts(struct sniff_tcp *tcp) {
     printf("\t\tDest Port:  %s\n", destination);
 }
 
+/*
+ * Send a pointer to where pseudo header and TCP is
+ * make chunk somerwhere to put the pseudo header htne the tcp
+ * check (addr at beginning, length which is 12 + (ip total - ip header))
+ */
+
 void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length) {
     struct sniff_tcp *tcp = (struct sniff_tcp *)
             (packet +  sizeof(struct sniff_ethernet) + sizeof(struct sniff_ip));
-    struct tcp_pseudo_header tcpPseudoHeader;
-    int len;
+    struct tcp_pseudo_header *tcpPseudoHeader = malloc(SIZE_PSEUDO);
+    unsigned short len;
+    //pesudo header is always 12
+    //ip total - ip header
+    len = ntohs(ip->ip_len) - (4*(IP_HL(ip)));
+    //printf("ipTotal  - ipHeader: %u - %u = %u\n", ntohs(ip->ip_len),  4*(IP_HL(ip)),  len);
+    //printf("ipSize: %i\ntcpSize %x\n", 4*(IP_HL(ip)), tcpSize);
 
-    memset(&tcpPseudoHeader, 0, sizeof(struct tcp_pseudo_header));
-    tcpPseudoHeader.pad = 0;
-    tcpPseudoHeader.len = (htons(ip->ip_len) - (ip->ip_ttl * 4));
-    tcpPseudoHeader.protocol = 6;
-    memcpy(tcpPseudoHeader.src, ip->ip_source, IP_ADDR_LENGTH);
-    memcpy(tcpPseudoHeader.dest, ip->ip_dest, IP_ADDR_LENGTH);
-
-    len = sizeof(struct tcp_pseudo_header) + tcpPseudoHeader.len;
+    //printf("ip total: %u\nip len %x\n", len, endian(ip->ip_len));
+    //len = sizeof(struct tcp_pseudo_header) + tcpPseudoHeader->len;
+    //lengh = ntohs(ip->ip_len) - (ipSize + tcpSize);
 
     printf("\n\tTCP Header\n");
     printTCPSourcePorts(tcp);
@@ -267,7 +285,7 @@ void tcpRead(const unsigned char *packet, struct sniff_ip *ip, int length) {
     printf("\t\tACK Number: %u\n", htonl(tcp->tcp_ack));
     tcpPrintFlags(tcp);
     printf("\t\tWindow Size: %u\n", endian(tcp->tcp_window_size));
-    tcpCheckSumRead(tcp, tcpPseudoHeader, len);
+    tcpCheckSumRead(tcp, ip, tcpPseudoHeader, len);
 }
 
 void udpRead(const unsigned char *packet) {

@@ -12,18 +12,18 @@ make all
 
 
 echo "******* LargeMix"
-diff test.largeMix.out trace_files/largeMix.out.txt
+-- diff test.largeMix.out trace_files/largeMix.out.txt
 echo "******* LargeMix2"
-diff test.largeMix2.out trace_files/largeMix2.out.txt
+-- diff test.largeMix2.out trace_files/largeMix2.out.txt
 echo "******* PingTest"
-diff test.ping.out trace_files/PingTest.out.txt
+-- diff test.ping.out trace_files/PingTest.out.txt
 echo "******* ArpTest"
-diff test.arp.out trace_files/ArpTest.out.txt
+-- diff test.arp.out trace_files/ArpTest.out.txt
 echo "******* BadCheckSum"
-diff test.ipbadcheck.out trace_files/IP_bad_checksum.out.txt
+-- diff test.ipbadcheck.out trace_files/IP_bad_checksum.out.txt
 echo "******* Small TCP"
-diff test.smalltcp.out trace_files/smallTCP.out.txt
+diff test.smalltcp.out trace_files/smallTCP.out.txt -y
 echo "******* TCPBadCheckSum"
 diff test.tcpbadcheck.out trace_files/TCP_bad_checksum.out.txt
 echo "******* TCPUDPFile"
-diff test.udp.out trace_files/UDPfile.out.txt
+-- diff test.udp.out trace_files/UDPfile.out.txt
