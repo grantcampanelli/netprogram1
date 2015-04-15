@@ -8,7 +8,7 @@
 #define endian(hex) (((hex & 0x00ff) << 8) + ((hex & 0xff00) >> 8))
 
 
-#define ETHER_ADDR_LEN	6
+#define ETHER_ADDR_LEN	6 /* Ethernet addresses are 6 bytes */
 #define ARP_MAC_ADDR_LEN 6
 #define ARP_IP_ADDR_LEN 4
 #define ETHER_SIZE 14
@@ -40,8 +40,10 @@ struct sniff_arp {
 #define IP_FLAG 8
 #define IP_IHL 0x0F
 #define IP_ADDR_LENGTH 4
+#define IP_RF 0x8000
 #define IP_TCP 0x6
 #define IP_UDP 0x11
+#define IP_DF 0x4000
 #define IP_ICMP 0x01
 #define IP_ICMP_REQUEST 8
 #define IP_ICMP_REPLY 0
@@ -84,6 +86,7 @@ struct sniff_udp {
 /*
  * TCP Struct
  */
+#define TCP_OFF(tcp)   (((tcp)->tcp_offset & 0xf0) >> 4)
 
 struct sniff_tcp {
     unsigned short tcp_src;
