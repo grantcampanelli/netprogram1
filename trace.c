@@ -176,16 +176,29 @@ void icmpRead(const unsigned char *packet, unsigned short length) {
 
 void tcpCheckSumRead(struct sniff_tcp * tcp, struct sniff_ip * ip, struct tcp_pseudo_header * tcpPseudoHeader,
                      unsigned short length) {
-    int checksum;
+    unsigned int checksum;
+    uint8_t pseudo[SIZE_PSEUDO];
     uint8_t tcpWithPseudo[length + SIZE_PSEUDO];
-    memcpy(tcpPseudoHeader->src, ip->ip_source, IP_ADDR_LENGTH);
-    memcpy(tcpPseudoHeader->dest, ip->ip_dest, IP_ADDR_LENGTH);
-    tcpPseudoHeader->pad = 0;
-    tcpPseudoHeader->protocol = 6;
-    tcpPseudoHeader->len = length & 0x00FF;
 
-    memcpy(tcpWithPseudo, tcpPseudoHeader, SIZE_PSEUDO);
+    memcpy(pseudo, ip->ip_source, IP_ADDR_LENGTH);
+    memcpy(pseudo + IP_ADDR_LENGTH, ip->ip_dest, IP_ADDR_LENGTH);
+    pseudo[8] = 0;
+    pseudo[9] = 6;
+    pseudo[10] = length >> 8;
+    pseudo[11] = length & 0x00FF;
+    //memcpy(pseudo + IP_ADDR_LENGTH + 1, 0, IP_ADDR_LENGTH);
+    //tcpPseudoHeader->pad = 0;
+    //tcpPseudoHeader->protocol = 6;
+    //tcpPseudoHeader->len = length;
+
+    //memcpy(tcpWithPseudo, tcpPseudoHeader, SIZE_PSEUDO);
+    memcpy(tcpWithPseudo, pseudo, SIZE_PSEUDO);
     memcpy(tcpWithPseudo + SIZE_PSEUDO, tcp, length);
+
+    //printf("ipTotal  - ipHeader: %u - %u = %u\n", ntohs(ip->ip_len),  4*(IP_HL(ip)),  length);
+//    for(i=0; i< length + SIZE_PSEUDO; i++) {
+//        printf("%x", tcpWithPseudo[i]);
+//    }
 
     checksum = in_cksum((unsigned short *)tcpWithPseudo, (length + SIZE_PSEUDO));
     if(!checksum)
